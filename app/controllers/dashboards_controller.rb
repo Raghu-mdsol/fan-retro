@@ -1,7 +1,6 @@
 class DashboardsController < ApplicationController
 
 	def index
-		
 		@boards = Board.where(user_id: current_user.id)
 	end
 
@@ -25,9 +24,8 @@ class DashboardsController < ApplicationController
 
 
 #redirect_to dashboards_path, flash: {notice: "Successfully checked in"}
-
-		end
-	end
+end
+end
 
 def show
 	@board = Board.find(params[:id])
