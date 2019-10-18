@@ -20,12 +20,8 @@ class DashboardsController < ApplicationController
 			redirect_to :action => 'index',id: @board
 		else 
 			flash[:warning] = 'should not be blank.'
-#flash[:notice] = "Post successfully created"
-
-
-#redirect_to dashboards_path, flash: {notice: "Successfully checked in"}
-end
-end
+		end
+	end
 
 def show
 	@board = Board.find(params[:id])
@@ -47,11 +43,8 @@ def update
 end
 
 private
+
 def board_params
 	params.require(:board).permit(:name, :description).merge(user_id: current_user.id)
 end
-
-
-
-
 end
