@@ -1,0 +1,10 @@
+<%= form_with url: dashboard_path, method: :put, scope: "board" do |form| %>
+<%= form.label :name %>
+<%= form.text_field :name ,class: 'form-control',placeholder: "Name" %><br/>
+<%= form.label :description %>
+<%= form.text_field :description ,class: 'form-control',placeholder: "Desription" %></br>
+<%= form.submit "update" ,:class=>"btn btn-info"%>
+<% end %>
+<br/>
+<%= link_to "Back" ,dashboards_path,:class=>"btn btn-info"%>
+

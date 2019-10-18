@@ -1,0 +1,36 @@
+welcome to retrospective
+
+<%= form_with url: dashboard_retrospectives_path(Board.first.id), scope: "board", :local => true do |form| %>
+	<div class="row">
+		<div class="col">
+			<%= form.label :positive %> <br>
+			<%= form.text_field :positive , class: "add-card" %>
+						<%= button_tag ,new_dashboard_retrospective method: :get %>
+		</div>
+
+		<div class="col">	
+			<%= form.label :negative %><br>
+			<%= form.text_field :negative , class:"add-card"%>
+			<button type="submit" class='btn btn-info pull-right'><i class="fa fa-plus"></i>
+			</button>
+		</div>
+		<div class="col">
+
+			<%= form.label :improvements %><br>
+			<%= form.text_field :improvements , class:"add-card"%>
+			<button type="submit" class='btn btn-info pull-right'><i class="fa fa-plus"></i>
+			</button>
+		</div>
+	</div>
+	
+<% end %>
+<br/>
+<% flash.each do |key, value| %>
+<div class="alert alert-warning %>"><%= value %></div>
+<% end %>
+
+<%= link_to "Back" ,dashboards_path,:class=>"btn btn-info"%>
+	
+
+
+

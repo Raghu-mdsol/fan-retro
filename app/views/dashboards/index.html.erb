@@ -1,2 +1,46 @@
-<h1>Dashboards#index</h1>
-<p>Find me in app/views/dashboards/index.html.erb</p>
+<div class="msg">
+	Your email is not verified. You need to verify it to continue using
+	FunRetro.
+	<a class="button" style="color:white">Send verification link to email</a>
+</div>
+<p style="color:purple;font-style:italic;font-size: 20px">FunRetro</p>
+<div class="dashboard">
+	<h1 style="color: #283593">My boards</h1>
+	<div class="container">
+
+		<div class="row">
+			<% @boards.each do |board| %>
+				<div class="col-sm-3"> 
+					<a href="<%=  dashboard_retrospectives_path(board) %>">
+						<div class='clearfix'>
+								<%= board.name %><br>
+								<% if board.description.length > Board::SIZE %>
+									<%= truncate("#{board.description}", length: 10) %>
+									<%= link_to "Read More", dashboard_path(board) %>
+								<% else %>
+									<%= board.description %>
+								<% end %>	
+						</div>
+					</a>
+
+					<div class='clearfix'>
+						<%= link_to '', dashboard_path(board), data: { method: :delete }, class:'fa fa-trash',style:"font-size:20px;color:blue;float:right"%> 
+						<%= link_to '', edit_dashboard_path(board),class:"fa fa-edit",style:"font-size:20px;color:black;float:right"%>
+					</div>
+					<%#= simple_truncate((board.description), length: 400, separator: ' ') %><%#= link_to "Read More", dashboard_path(board)%>
+				</div>
+			<% end %>
+
+			<div class="temp col-sm-3" style="float:left;margin:10px;height:100px;">
+				<span class="add">
+					<%= link_to "", new_dashboard_path,class:"fa fa-plus",style:"font-size:20px;color:white;"%>
+				</span>	
+				<strong >
+					<p style="color:purple;font-size: 13px">Add Board</p>
+				</strong>
+			</div>
+
+		</div>
+	</div>
+</div>
+</table>

@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+ #sticky-footer 
+ {
+ 	flex-shrink: none;
+ 	position: fixed;
+ 	left: 0;
+ 	bottom: 0;
+ 	width: 100%;
+ 	color: white;
+ }
+
+ .add 
+ {
+ 	padding: 22px 22px;
+ 	color: #f3f3f3;
+ 	background: #8e24aa;
+ 	border-radius: 50%;
+ 	line-height: 4.9em;
+ 	font-family: -apple-system,BlinkMacSystemFont,'Roboto',sans-serif;
+ 	
+
+ }
+
+ .dashboard 
+ {
+ 	padding: 30px 40px;
+ 	background: #f3f3f3;
+ }
+ .msg 
+ {
+ 	padding: 20px 10px;
+ 	font-size: 1.1em;
+ 	background-color: #feefb3;
+
+ }
+ .button 
+ {
+ 	padding: 5px 8px;
+ 	margin-left: 10px;
+ 	font-family: 'Roboto',sans-serif;
+ 	background: #9c27b0;
+ 	border-bottom: 2px solid #8e24aa;
+ 	border-radius: 2px;
+
+ }
+ .temp
+ {
+ 	display: inline-block;
+ 	width: 20%;
+ 	margin: 20px 0;
+ 	margin-top: 17px;
+ 	font-weight: bold;
+ 	color: #8e24aa;
+ 	text-align: center;
+ 	border: 1px dashed;
+ 	float:left;
+ 	margin:10px;height:100px;
+ }
+
+ .col-sm-3
+ {
+ 	background-color:lavender;
+ 	border-style: solid;
+ 	float:left;
+ 	margin:10px;
+ 	height:100px;
+ }
+
+.add-card {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 0 0 10px;
+    font-weight: bold;
+    color: #555;
+    background: #ddd;
+    border: 0;
+}
+.btn
+{
+	color:red;
+	background-color: red;
+	font-size: 20px;
+}
+
+.adding
+{
+ 	padding: 22px 22px;
+ 	color: #f3f3f3;
+ 	background: #008080;
+ 	border-radius: 32%;
+ 	line-height: 4.9em;
+ 	font-family: -apple-system,BlinkMacSystemFont,'Roboto',sans-serif;
+
+}
