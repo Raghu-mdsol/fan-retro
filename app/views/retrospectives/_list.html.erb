@@ -1,0 +1,30 @@
+<style type="text/css">
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table {
+    border: 0;
+}
+table td, table th {
+    border: 1px solid black;
+}
+</style>
+<div>
+	<table style='width:100%;border:1px solid #ccc;'>
+		<th style='width:25%'> Positive </th>
+		<th style='width:25%'> Negative </th>
+		<th style='width:25%'> Improvements </th>
+		<th style='width:25%'> Action </th>
+		<th style='width:25%'> Action </th>
+	<% @retrospectives.each do |retro| %>
+				<tr id="retro_<%= retro.id %>">
+					<td style='width:25%'><%= retro.postive %></td>
+					<td style='width:25%'><%= retro.negative %></td>
+					<td style='width:25%'><%= retro.improvements %></td>
+					<td style='width:25%'></td>
+				</tr>
+	<% end %>
+	</table>
+</div>
+
